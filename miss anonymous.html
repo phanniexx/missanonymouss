@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miss Anonymous</title>
+  <style>
+    :root {
+      --purple: #6a0dad;
+      --nude: #f5e1da;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--nude);
+      color: #333;
+    }
+
+    p {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background-color: var(--purple);
+      color: var(--white);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--white);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: var(--purple);
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    nav a:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 3rem 2rem;
+      transition: transform 0.3s ease-in-out;
+      display: none;
+    }
+
+    section:target {
+      display: block;
+      transform: scale(1.03);
+    }
+
+    #home:target,
+    #home {
+      display: block;
+    }
+
+    h2 {
+      color: var(--purple);
+      margin-bottom: 1rem;
+    }
+
+    .content-box {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .content-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .books-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .book {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .book img {
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .book-content {
+      flex: 1;
+    }
+
+    .book:hover {
+      transform: scale(1.03);
+    }
+
+    .book a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: var(--purple);
+      color: white;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .book a:hover {
+      background: #5500aa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: var(--purple);
+      color: var(--white);
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: var(--purple);
+      color: var(--white);
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .author-image {
+      display: block;
+      max-width: 300px;
+      margin: 1.5rem auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .social-links a {
+      color: var(--purple);
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Miss Anonymous</h1>
+    <p>Author | Dreamer | Storyteller</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#books">Books</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <div class="content-box">
+      <h2>Welcome to My World of Words</h2>
+      <img src="miss_anonymous1.png.png" alt="Author" class="author-image">
+      <p>Welcome to the official space of Miss Anonymous — a storyteller whose words whisper emotions and ignite the imagination. Here, every paragraph is a doorway, every sentence a heartbeat, and every story a piece of her soul. Whether you're here for love, heartbreak, or laughter, you've just entered a universe where fiction feels like home.</p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="content-box">
+      <h3>About Miss Anonymous</h3>
+      <img src="miss_anonymous2.png" alt="Author" class="author-image">
+      <p>Miss Anonymous is the pen name of Michelle O. O. N., a Nigerian college student currently pursuing an undergraduate degree in International Relations. When she's not writing, she's probably impulse-buying books and snacks, binge-watching anime, or falling head over heels for fictional characters.</p>
+      <p>Her debut novel, <strong>Fake Dating My Ex's Favourite Hockey Player</strong>, is available to read on over 20 platforms. The series is also available for purchase as an eBook on Amazon, Barnes & Noble, and Google Play.</p>
+    </div>
+  </section>
+
+  <section id="books">
+    <div class="content-box">
+      <h3>Books</h3>
+      <div class="books-grid">
+        <div class="book">
+          <img src="miss_anonymousbookcover.jpg" alt="Fake Dating Book Cover">
+          <div class="book-content">
+            <h3>Fake Dating My Ex's Favourite Hockey Player</h3>
+            <p><em>Romance | Drama</em></p>
+            <p>Just imagine it, Em. His ex-fiancée... dating his favourite hockey player</p>
+            <p>Zane and I were together for ten years. When he had no one, I stayed by his side, supporting his hockey career while believing at the end of all our struggles, I'll be his wife and the only one at his side.</p>
+            <p>But after six years of dating, and four years of being his fiancée, not only did he leave me, but seven months later I receive an invitation... to his wedding!</p>
+            <p>If that isn't bad enough, the month long wedding cruise is for couples only and requires a plus one. If Zane thinks breaking my heart left me too miserable to move on, he thought wrong!</p>
+            <p>Not only did it make me stronger... it made me strong enough to move on with his favourite bad boy hockey player, <strong>Liam Calloway</strong>.</p>
+            <p><strong>Get on:</strong></p>
+            <a href="https://www.barnesandnoble.com/w/fake-dating-my-exs-favourite-hockey-player-miss-anonymous/1147444242" target="_blank">Barnes & Noble</a>
+            <a href="https://www.novelol.com/goodnovel/share?bid=31000960507&uid=111916781&l=bookDetail&sc=fxrw_0_bookDetail&rd=1&type=3" target="_blank">GoodNovel</a>
+            <a href="https://m.dreame.com/novel/1860066816?auto_jump=false&link_type=1&utm_campaign=app_share_copyLink&utm_source=sns_en_apppromo&directedId=1860066816" target="_blank">Dreame</a>
+            <a href="https://play.google.com/store/books/details/Miss_Anonymous_Fake_Dating_My_Ex_s_Favourite_Hocke?id=FH1eEQAAQBAJ" target="_blank">Google Play</a>
+            <a href="https://books.apple.com/us/book/fake-dating-my-exs-favourite-hockey-player/id6746067586" target="_blank">Apple Books</a>
+            <a href="https://www.amazon.com/Fake-Dating-Favourite-Hockey-Player-ebook/dp/B0F915RGC5" target="_blank">Amazon</a>
+            <a href="https://www.booktopia.com.au/fake-dating-my-ex-s-favourite-hockey-player-miss-anonymous/ebook/6610000802289.html" target="_blank">Booktopia</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="content-box">
+      <h3>Contact Me</h3>
+      <form action="https://formsubmit.co/miss.anonymous.quill@gmail.com" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="social-links">
+        <p>Follow me on:</p>
+        <a href="https://www.facebook.com/yourprofile" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/missanonymouswrites/profilecard/?igsh=MWF3bjR3d3pqMGtsZw==" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Miss Anonymous. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
